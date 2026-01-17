@@ -1,4 +1,4 @@
-# Shift–Reduce (SR) Parser Pro
+# Shift–Reduce (SR) Parser 
 
 A robust, web-based implementation of a Bottom-Up Shift-Reduce parser. This tool visualizes the stack operations and input transitions required to parse a string based on a user-defined Context-Free Grammar (CFG).
 
