@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift–Reduce Parser Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Shift–Reduce Parser</h1>
+
+    <div class="grammar">
+      <strong>Grammar Rules (e.g., E->id)</strong>
+      <textarea id="grammarInput" rows="5" placeholder="E->E+T&#10;E->T&#10;T->id"></textarea>
+    </div>
+
+    <div class="table-container">
+      <table id="parserTable">
+        <thead>
+          <tr>
+            <th>Stack</th>
+            <th>Input</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="controls">
+      <input id="inputStr" placeholder="Input (e.g., id+id)">
+      <div class="button-group">
+        <button onclick="start()">Start</button>
+        <button onclick="nextStep()">Next Step</button>
+        <button id="resetBtn" onclick="resetParser()">Reset</button>
+        <button id="exportBtn" onclick="exportTrace()">Export</button>
+      </div>
+    </div>
+  </div>
+  <script src="parser.js"></script>
+</body>
+</html>

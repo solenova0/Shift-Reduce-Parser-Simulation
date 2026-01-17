@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable table area */
+.table-container {
+  width: 100%;
+  max-height: 400px; /* Limits height so buttons are visible */
+  overflow-y: auto;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border: 1px solid #334155;
+  background: #020617;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px; /* Prevents squishing */
+}
+
+th, td {
+  border: 1px solid #1e293b;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Fixed/Responsive Controls */
+.controls {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: sticky; /* Keeps it in view if desired */
+  bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Wraps buttons on small screens */
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+button {
+  flex: 1;
+  min-width: 100px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #38bdf8;
+  color: #020617;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#resetBtn { background: #ef4444; color: white; } /* Made Reset Red for visibility */
+#exportBtn { background: #10b981; color: white; }
+
+/* Status Colors */
+.action-shift { color: #22c55e; }
+.action-reduce { color: #facc15; }
+.action-accept { color: #4ade80; font-weight: bold; }
+.action-reject { color: #f87171; font-weight: bold; }
